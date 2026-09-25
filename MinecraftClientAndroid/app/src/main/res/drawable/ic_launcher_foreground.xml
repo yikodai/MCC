@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- 草方块顶面 -->
+    <path
+        android:fillColor="#5EBB4A"
+        android:pathData="M22,30h64v18h-64z" />
+    <!-- 草方块高光与暗部像素 -->
+    <path
+        android:fillColor="#7ED968"
+        android:pathData="M22,30h16v6h-16z" />
+    <path
+        android:fillColor="#3E8A31"
+        android:pathData="M70,42h16v6h-16z" />
+    <!-- 泥土面纹理 -->
+    <path
+        android:fillColor="#6A3F22"
+        android:pathData="M30,58h14v10h-14z" />
+    <path
+        android:fillColor="#8B5A33"
+        android:pathData="M58,66h18v12h-18z" />
+    <!-- 聊天气泡，表示这是一个命令行客户端 -->
+    <path
+        android:fillColor="#F2F2F2"
+        android:pathData="M46,20h30a6,6 0 0 1 6,6v12a6,6 0 0 1 -6,6h-16l-8,8v-8h-6a6,6 0 0 1 -6,-6v-12a6,6 0 0 1 6,-6z" />
+    <path
+        android:fillColor="#2A2A2A"
+        android:pathData="M52,28h6v4h-6z M62,28h6v4h-6z M72,28h4v4h-4z" />
+</vector>

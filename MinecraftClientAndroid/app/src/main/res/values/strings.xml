@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MCC 安卓版</string>
+
+    <!-- 启动页 -->
+    <string name="title_servers">服务器</string>
+    <string name="title_account">账号</string>
+    <string name="action_add_server">添加服务器</string>
+    <string name="action_connect">连接</string>
+    <string name="action_edit">编辑</string>
+    <string name="action_delete">删除</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_save">保存</string>
+    <string name="action_login_microsoft">微软登录</string>
+    <string name="action_login_offline">离线登录</string>
+    <string name="action_logout">退出登录</string>
+    <string name="empty_servers">还没有服务器，先添加一台吧</string>
+    <string name="account_none">未登录</string>
+    <string name="dialog_server_title">服务器信息</string>
+    <string name="dialog_login_offline_title">离线登录</string>
+    <string name="hint_server_name">名称（例如 生存服）</string>
+    <string name="hint_server_address">地址（例如 mc.example.com 或 1.2.3.4:25565）</string>
+    <string name="hint_offline_username">游戏内用户名</string>
+    <string name="msg_loading">请稍候…</string>
+
+    <!-- 微软登录 -->
+    <string name="ms_login_title">微软账号登录</string>
+    <string name="ms_login_instruction">在浏览器中打开下面的网址，输入设备码完成登录：</string>
+    <string name="ms_login_waiting">等待授权中…</string>
+    <string name="ms_login_open_browser">打开浏览器</string>
+    <string name="ms_login_copy_code">复制设备码</string>
+    <string name="ms_login_copied">设备码已复制</string>
+    <string name="ms_login_success">登录成功：%1$s</string>
+
+    <!-- 命令行界面 -->
+    <string name="console_title">%1$s</string>
+    <string name="console_input_hint">输入聊天内容或 /指令</string>
+    <string name="action_send">发送</string>
+    <string name="action_disconnect">断开连接</string>
+    <string name="action_clear_console">清屏</string>
+    <string name="action_copy_log">复制日志</string>
+    <string name="msg_log_copied">日志已复制到剪贴板</string>
+    <string name="msg_code_copied">已复制到剪贴板</string>
+    <string name="console_state_connecting">正在连接 %1$s…</string>
+    <string name="console_state_disconnected">已断开连接</string>
+    <string name="console_notification_channel">连接状态</string>
+    <string name="console_notification_title">MCC 已连接：%1$s</string>
+    <string name="console_notification_text">点击返回命令行界面</string>
+    <string name="console_history_hint">↑ 取回上一条输入</string>
+
+    <!-- 连接流程 -->
+    <string name="msg_need_account">请先登录账号（微软正版或离线）</string>
+    <string name="msg_need_server">请选择一台服务器</string>
+    <string name="msg_connecting_server">正在连接 %1$s…</string>
+    <string name="msg_connect_failed">连接失败：%1$s</string>
+    <string name="server_delete_confirm">确认删除「%1$s」？</string>
+    <string name="server_invalid_address">服务器地址不能为空</string>
+
+    <!-- 权限 -->
+    <string name="permission_notification_rationale">需要通知权限，才能在后台保持连接时显示状态</string>
+
+    <!-- 启动页补充 -->
+    <string name="account_display_microsoft">%1$s（微软正版）</string>
+    <string name="account_display_offline">%1$s（离线账号）</string>
+    <string name="ms_login_slow_down">等待授权中，轮询间隔调整为 %1$d 秒…</string>
+    <string name="ms_login_failed">登录失败：%1$s</string>
+    <string name="ms_login_no_browser">未找到可用的浏览器，请手动打开验证网址</string>
+    <string name="offline_username_invalid">用户名需为 3-16 位字母、数字或下划线</string>
+</resources>

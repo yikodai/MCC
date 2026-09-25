@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mcc_green">#3C8527</color>
+    <color name="mcc_green_dark">#2A5C1B</color>
+    <color name="mcc_surface">#121212</color>
+    <color name="console_background">#0D0D0D</color>
+    <color name="console_text">#E0E0E0</color>
+    <color name="white">#FFFFFF</color>
+</resources>
