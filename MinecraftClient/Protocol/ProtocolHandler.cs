@@ -930,7 +930,14 @@ namespace MinecraftClient.Protocol
             ConsoleIO.WriteLine("\n" + Microsoft.SignInUrl + "\n");
 
             ConsoleIO.WriteLine(Translations.mcc_browser_login_code);
-            string code = ConsoleIO.ReadLine();
+            string code = ConsoleIO.ReadLine().Trim();
+
+            // Users may paste either the bare authorization code or the full redirect
+            // URL returned after signing in; extract the code parameter in the latter case.
+            string? urlCode = Request.GetParameter(code, "code");
+            if (!string.IsNullOrEmpty(urlCode))
+                code = urlCode;
+
             ConsoleIO.WriteLine(string.Format(Translations.mcc_connecting, "Microsoft"));
 
             var msaResponse = Microsoft.RequestAccessToken(code);

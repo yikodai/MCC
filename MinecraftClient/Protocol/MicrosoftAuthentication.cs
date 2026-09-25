@@ -36,7 +36,7 @@ namespace MinecraftClient.Protocol
         public static LoginResponse RequestAccessToken(string code)
         {
             string postData = "client_id={0}&grant_type=authorization_code&redirect_uri=https%3A%2F%2Fmccteam.github.io%2Fredirect.html&code={1}";
-            postData = string.Format(postData, clientId, code);
+            postData = string.Format(postData, clientId, Uri.EscapeDataString(code));
             return RequestToken(postData);
         }
 
@@ -48,7 +48,7 @@ namespace MinecraftClient.Protocol
         public static LoginResponse RefreshAccessToken(string refreshToken)
         {
             string postData = "client_id={0}&grant_type=refresh_token&redirect_uri=https%3A%2F%2Fmccteam.github.io%2Fredirect.html&refresh_token={1}";
-            postData = string.Format(postData, clientId, refreshToken);
+            postData = string.Format(postData, clientId, Uri.EscapeDataString(refreshToken));
             return RequestToken(postData);
         }
 
@@ -100,7 +100,7 @@ namespace MinecraftClient.Protocol
 
             string postData = string.Format(
                 "client_id={0}&grant_type=urn:ietf:params:oauth:grant-type:device_code&device_code={1}",
-                clientId, deviceCode);
+                clientId, Uri.EscapeDataString(deviceCode));
 
             var stopwatch = Stopwatch.StartNew();
             int pollInterval = interval;
@@ -482,6 +482,43 @@ namespace MinecraftClient.Protocol
             return query.Split('&')
                 .ToDictionary(c => c.Split('=')[0],
                               c => Uri.UnescapeDataString(c.Split('=')[1]));
+        }
+
+        /// <summary>
+        /// Extract a single parameter value from a query string, URL fragment, or full URL.
+        /// </summary>
+        /// <param name="input">Raw text that may contain a "name=value" pair</param>
+        /// <param name="name">Parameter name to look for</param>
+        /// <returns>The decoded parameter value, or null when it is not present</returns>
+        static public string? GetParameter(string input, string name)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+                return null;
+
+            string query = input;
+            int hashIndex = query.IndexOf('#');
+            if (hashIndex >= 0)
+            {
+                query = query[(hashIndex + 1)..];
+            }
+            else
+            {
+                int queryIndex = query.IndexOf('?');
+                if (queryIndex >= 0)
+                    query = query[(queryIndex + 1)..];
+            }
+
+            foreach (string pair in query.Split('&', StringSplitOptions.RemoveEmptyEntries))
+            {
+                int separator = pair.IndexOf('=');
+                if (separator <= 0)
+                    continue;
+
+                if (pair.AsSpan(0, separator).SequenceEqual(name))
+                    return Uri.UnescapeDataString(pair[(separator + 1)..]);
+            }
+
+            return null;
         }
     }
 }
