@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">MCC 安卓版</string>
+
+  <string name="section_account">微软账号</string>
+  <string name="section_server">服务器</string>
+  <string name="section_chat">聊天</string>
+
+  <string name="hint_server_host">服务器地址</string>
+  <string name="hint_server_port">端口</string>
+  <string name="hint_chat_input">输入消息，以 / 开头会作为指令发送</string>
+
+  <string name="btn_login">微软登录</string>
+  <string name="btn_logout">退出登录</string>
+  <string name="btn_connect">连接</string>
+  <string name="btn_disconnect">断开</string>
+  <string name="btn_send">发送</string>
+  <string name="btn_open_browser">打开登录页面</string>
+  <string name="btn_copy_code">复制代码</string>
+
+  <string name="status_logged_out">未登录</string>
+  <string name="status_logged_in">已登录：{0}</string>
+  <string name="status_device_code">请打开登录页面并输入代码：{0}</string>
+  <string name="status_disconnected">已断开</string>
+  <string name="status_connecting">正在连接 {0}:{1}（{2}）...</string>
+  <string name="status_connected">已连接到 {0}，账号 {1}</string>
+
+  <string name="msg_login_required">请先完成微软账号登录。</string>
+  <string name="msg_invalid_server">请填写服务器地址。</string>
+  <string name="msg_signed_in">已登录：{0}</string>
+  <string name="msg_signed_out">已退出登录</string>
+  <string name="msg_copied">设备代码已复制到剪贴板</string>
+  <string name="msg_already_connected">当前已处于连接状态。</string>
+  <string name="msg_not_connected">当前未连接。</string>
+  <string name="msg_link_copied">登录链接已复制到剪贴板</string>
+</resources>

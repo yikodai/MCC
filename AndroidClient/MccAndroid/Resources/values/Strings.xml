@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">MCC Android</string>
+
+  <string name="section_account">Microsoft account</string>
+  <string name="section_server">Server</string>
+  <string name="section_chat">Chat</string>
+
+  <string name="hint_server_host">Server address</string>
+  <string name="hint_server_port">Port</string>
+  <string name="hint_chat_input">Type a message, /command is sent as a command</string>
+
+  <string name="btn_login">Sign in with Microsoft</string>
+  <string name="btn_logout">Sign out</string>
+  <string name="btn_connect">Connect</string>
+  <string name="btn_disconnect">Disconnect</string>
+  <string name="btn_send">Send</string>
+  <string name="btn_open_browser">Open sign-in page</string>
+  <string name="btn_copy_code">Copy code</string>
+
+  <string name="status_logged_out">Not signed in</string>
+  <string name="status_logged_in">Signed in as {0}</string>
+  <string name="status_device_code">Open the sign-in page and enter code: {0}</string>
+  <string name="status_disconnected">Disconnected</string>
+  <string name="status_connecting">Connecting to {0}:{1} ({2})...</string>
+  <string name="status_connected">Connected to {0} as {1}</string>
+
+  <string name="msg_login_required">Sign in with your Microsoft account first.</string>
+  <string name="msg_invalid_server">Enter a server address.</string>
+  <string name="msg_signed_in">Signed in as {0}</string>
+  <string name="msg_signed_out">Signed out</string>
+  <string name="msg_copied">Device code copied to clipboard</string>
+  <string name="msg_already_connected">Already connected.</string>
+  <string name="msg_not_connected">Not connected.</string>
+  <string name="msg_link_copied">Sign-in link copied to clipboard</string>
+</resources>
